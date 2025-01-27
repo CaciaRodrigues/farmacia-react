@@ -42,16 +42,16 @@ function FormCategoria() {
         await atualizar(`/categorias`, categoria, setCategoria);
       } catch (error: any) {
         if (error.toString().includes('403')) {
-          alert('Erro ao atualizar tema');
+          alert('Erro ao atualizar categoria');
         }
       }
     } else {
       try {
         await cadastrar(`/categorias`, categoria, setCategoria);
-        alert('O Tema foi cadastrado com sucesso!');
+        alert('A categoria foi cadastrado com sucesso!');
       } catch (error: any) {
         if (error.toString().includes('403')) {
-          alert('Erro ao cadastrar o tema.');
+          alert('Erro ao cadastrar a categoria.');
         }
       }
     }
@@ -69,7 +69,7 @@ function FormCategoria() {
           <label htmlFor="descricao">Descrição da Categoria</label>
           <input
             type="text"
-            placeholder="Descreva aqui seu tema"
+            placeholder="Descreva aqui sua categoria"
             name="descricao"
             className="border-2 border-slate-700 rounded p-2"
             value={categoria.descricao}
