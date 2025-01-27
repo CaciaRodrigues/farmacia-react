@@ -33,10 +33,10 @@ function DeletarCategoria() {
 
     try {
       await deletar(`/categorias/${id}`);
-      alert('Tema apagado com sucesso');
+      alert('categoria apagado com sucesso');
     } catch (error: any) {
       if (error.toString().includes('403')) {
-        alert('Erro ao deletar o tema.');
+        alert('Erro ao deletar o categoria.');
       }
     }
 
@@ -44,7 +44,7 @@ function DeletarCategoria() {
   }
 
   function retornar() {
-    navigate('/temas');
+    navigate('/categorias');
   }
 
   return (

@@ -1,5 +1,5 @@
 import { DNA } from 'react-loader-spinner';
-import CardCategoria from '../cardcategorias/CardCategorias';
+import CardCategorias from '../cardcategorias/CardCategorias';
 import { useEffect, useState } from 'react';
 import Categoria from '../../../models/Categoria';
 import { buscar } from '../../../services/Service';
@@ -39,7 +39,7 @@ function ListaCategorias() {
             className="grid grid-cols-1 md:grid-cols-2 
                                     lg:grid-cols-3 gap-8">
             {categorias.map((categoria) => (
-              <CardCategoria key={categoria.id} categoria={categoria} />
+              <CardCategorias key={categoria.id} categoria={categoria} />
             ))}
           </div>
         </div>
